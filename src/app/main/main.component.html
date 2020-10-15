@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <div class="bg"></div>
+  <div
+    class="planet"
+    [ngClass]="planet.classes"
+    *ngFor="let planet of planets"
+    (click)="onPlanetClick(planet)"
+  ></div>
+  <!-- <div class="planet planet-sm mars hidden"></div> -->
+</div>
