@@ -1,10 +1,15 @@
 <div class="container-fluid">
-  <div class="bg"></div>
+  <div class="bg" [ngStyle]="{ transform: 'scale(' + zoom + ')' }"></div>
   <div
     class="planet"
     [ngClass]="planet.classes"
     *ngFor="let planet of planets"
     (click)="onPlanetClick(planet)"
-  ></div>
+  >
+    <h2>{{ planet.title }}</h2>
+    <img src="./../../assets/left-chevron.svg" class="left" />
+    <img src="./../../assets/right-chevron.svg" class="right" />
+    <p>{{ planet.description }}</p>
+  </div>
   <!-- <div class="planet planet-sm mars hidden"></div> -->
 </div>

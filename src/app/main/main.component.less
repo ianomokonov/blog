@@ -1,11 +1,14 @@
 .container-fluid {
   padding: 0;
+  overflow: hidden;
+
   .bg {
     background-image: url(../../assets/main_bkg.jpg);
     position: absolute;
     height: 100%;
     width: 100%;
     filter: contrast(200%);
+    transition: 1s;
 
     &::after {
       content: "";
@@ -31,8 +34,40 @@
     background-size: cover;
     background-repeat: no-repeat;
     transition: 1s;
-    transform: translate(0, 0);
+    transform: translate(-200px, -80px);
     opacity: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    h2 {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0;
+      font-size: 100px;
+      text-shadow: 1px 1px 2px black;
+      position: absolute;
+      transition: 1s;
+    }
+
+    img {
+      width: 30px;
+      height: 50px;
+      opacity: 0;
+      transition: 1s;
+      position: absolute;
+    }
+
+    p {
+      width: 300px;
+      opacity: 1;
+      transition: 1s;
+      position: absolute;
+      transform: translate(140%, 0px);
+      font-weight: 300;
+    }
 
     &.planet-lg {
       height: 500px;
@@ -56,6 +91,14 @@
       height: 80px;
       width: 82px;
 
+      h2 {
+        font-size: 30px;
+      }
+
+      p {
+        opacity: 0;
+      }
+
       &.moon {
         background-position: 0 0;
       }
@@ -72,10 +115,32 @@
 
     &.next {
       transform: translate(calc(50vw - 150px), calc(50vh - 80px));
+
+      h2 {
+        transform: translate(-100%, 0px);
+      }
+
+      img {
+        &.right {
+          opacity: 1;
+        }
+        transform: translate(210%, 0px);
+      }
     }
 
     &.prev {
       transform: translate(calc(-50vw + 150px), calc(50vh - 80px));
+
+      h2 {
+        transform: translate(100%, 0px);
+      }
+
+      img {
+        &.left {
+          opacity: 1;
+        }
+        transform: translate(-210%, 0px);
+      }
     }
 
     &.hidden {
