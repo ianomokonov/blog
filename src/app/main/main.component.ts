@@ -69,6 +69,7 @@ export class MainComponent implements OnInit {
 
   onPlanetClick(planet: Planet): void {
     if (planet.classes.indexOf('current') > -1) {
+      this.router.navigate([planet.url]);
       return;
     }
     const currentPlanet = this.planets.find(

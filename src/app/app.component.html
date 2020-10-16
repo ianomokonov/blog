@@ -2,4 +2,6 @@
   <a class="nav-item">Обо мне</a>
   <a class="nav-item">Контакты</a>
 </nav>
-<router-outlet></router-outlet>
+<div [ngClass]="{ paddinged: isPaddinged() }">
+  <router-outlet></router-outlet>
+</div>
