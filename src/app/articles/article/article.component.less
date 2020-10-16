@@ -1,0 +1,46 @@
+.header-container {
+  background-position: center;
+  background-size: cover;
+  .header {
+    height: 20vh;
+    h2 {
+      margin-bottom: 30px;
+      color: white;
+      text-transform: uppercase;
+      max-width: 42vw;
+    }
+  }
+}
+
+article {
+  .title {
+    h3 {
+      margin-bottom: 0;
+    }
+    .tags {
+      color: rgb(165, 165, 165);
+      a {
+        color: rgb(165, 165, 165);
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  blockquote {
+    padding: 10px;
+    padding-left: 20px;
+
+    position: relative;
+    background: #99ccff6b;
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 0.5rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rgb(18, 47, 179);
+    }
+  }
+}

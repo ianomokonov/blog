@@ -49,7 +49,7 @@ export class MainComponent implements OnInit {
       zoom: 1.1,
       classes: ['planet-sm', 'moon', 'next'],
       title: 'Верстка',
-      url: '/make-up',
+      url: '/makets',
       description:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse error laboriosam iste dolorem laborum quasi, possimus dolore ea perspiciatis praesentium itaque commodi quis quibusdam incidunt, porro, nostrum consectetur facere? Incidunt?',
     },

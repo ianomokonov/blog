@@ -6,19 +6,28 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { ArticleComponent } from './articles/article/article.component';
+import { MaketsComponent } from './makets/makets.component';
+import { MaketComponent } from './makets/maket/maket.component';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     ArticlesComponent,
-    ArticleComponent
+    ArticleComponent,
+    MaketsComponent,
+    MaketComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
+  imports: [BrowserModule, AppRoutingModule, HighlightModule],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js'),
+      },
+    },
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

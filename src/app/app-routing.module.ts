@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { ArticleComponent } from './articles/article/article.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { MainComponent } from './main/main.component';
+import { MaketComponent } from './makets/maket/maket.component';
+import { MaketsComponent } from './makets/makets.component';
 
 const routes: Routes = [
   {
@@ -17,6 +19,15 @@ const routes: Routes = [
   {
     path: 'articles/:id',
     component: ArticleComponent,
+  },
+  {
+    path: 'makets',
+    component: MaketsComponent,
+    
+  },
+  {
+    path: 'makets/:id',
+    component: MaketComponent,
   },
 ];
 
