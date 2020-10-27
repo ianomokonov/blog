@@ -14,7 +14,7 @@ import { debounceTime, throttleTime } from 'rxjs/operators';
 })
 export class MaketsComponent implements OnInit {
   private onScroll$: Subject<WheelEvent> = new Subject();
-  isScrolled = true;
+  private isScrolled = true;
   delta = 0;
   @HostListener('document:wheel', ['$event']) doSth($event: WheelEvent) {
     if (this.isScrolled) {
